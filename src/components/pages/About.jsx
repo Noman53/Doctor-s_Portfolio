@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaUserMd, FaGraduationCap, FaAward } from 'react-icons/fa';
+import portrait from '/src/assets/surgeon.jpg'; // ✅ Imported placeholder image
 
 const About = () => {
   return (
@@ -20,8 +21,12 @@ const About = () => {
         </motion.div>
 
         <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}>
-          <div className="w-full h-56 rounded-xl bg-slate-800 flex items-center justify-center glass-card hover-scale cursor-pointer">
-            Surgeon Portrait
+          <div className="w-full h-56 rounded-xl overflow-hidden shadow-md glass-card hover-scale cursor-pointer">
+            <img
+              src={portrait}
+              alt="Dr. Arya Sharma portrait placeholder"
+              className="w-full h-full object-cover"
+            />
           </div>
         </motion.div>
       </div>
